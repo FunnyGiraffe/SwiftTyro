@@ -3,7 +3,7 @@
 //  SwiftTyro
 //
 //  Created by giraffe on 2020/3/2.
-//  Copyright © 2020 ghlw. All rights reserved.
+//  Copyright © 2020 giraffe. All rights reserved.
 //
 
 import Foundation
