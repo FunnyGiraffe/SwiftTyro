@@ -90,7 +90,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = ghlw;
+				ORGANIZATIONNAME = giraffe;
 				TargetAttributes = {
 					C17C9135240D417B004E00C1 = {
 						CreatedOnToolsVersion = 11.3.1;
