@@ -114,7 +114,6 @@ default:
 }
 
 
-
 /**
     Exp1 ? Exp2 : Exp3
     如果Exp1为真，则执行Exp2
@@ -124,4 +123,52 @@ var age2 = 20
 var isAdult = age >= 18 ? "成年人" : "未成年人"
 print(isAdult)
 
+/**
+    2020/3/5
+    字符串的方法汇总：长度、拼接、查找、替换、截取、分割、获取指定位置的字符、去掉首位空白符、格式化、大小写转换等方法
+ */
+var text = "Hello"
+//获取字符串长度
+let length: Int = text.count
+//判断字符串是否为空
+let empty: Bool = text.isEmpty
+//字符串拼接
+let helloSwift = text + ", Apple"
+//字符串拼接，值改变
+text += ", Swift"
+text.append(", world")
+//判断字符串是否相等
+let isEqual: Bool = text == "Hello"
+//字符串强转整型
+Int("10")
+//判断字符串是否包含前缀
+text.hasPrefix("He")
+//判断字符串是否包含后缀
+text.hasSuffix("lo")
+//字符串遍历
+for i in text {
+    print(i)
+}
+
+
+
+//判断一个数是否为质数
+var judgeNum: Int = 919817246
+var mod: Int
+var flag: Bool = false
+for i in 1...judgeNum {
+    mod = judgeNum % i
+    if (mod == 0) {
+        print("-----> \(judgeNum) 可以被平均分成 \(i) 份，每一份有 \(judgeNum/i)个")
+        if (i != 1 && i != 89) {
+            flag = true
+        }
+        continue
+    }
+}
+if (!flag){
+    print("\(judgeNum) 除了 1 和 它本身外，不能被其他数整除，所以 \(judgeNum) 是一个质数")
+} else {
+    print("\(judgeNum) 不是一个质数")
+}
 
