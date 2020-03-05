@@ -153,14 +153,14 @@ for i in text {
 
 
 //判断一个数是否为质数
-var judgeNum: Int = 919817246
+var judgeNum: Int = 89
 var mod: Int
 var flag: Bool = false
 for i in 1...judgeNum {
     mod = judgeNum % i
     if (mod == 0) {
         print("-----> \(judgeNum) 可以被平均分成 \(i) 份，每一份有 \(judgeNum/i)个")
-        if (i != 1 && i != 89) {
+        if (i != 1 && i != judgeNum) {
             flag = true
         }
         continue
