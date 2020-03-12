@@ -150,7 +150,27 @@ for i in text {
     print(i)
 }
 
+/**
+ Swift 5.1的 String API 不是很友好，像获取字符串中某个位置的字符、判断字符串是否包含子字符串、字符串格式化等功能缺失。可以通过将 Swift 的 String 转换成 Objective-C  的 NSString 使用 OC 的字符串 API
+ */
+/**
+ 要使用NSString的情况:
+ 1.String 有hasPrefi/hasSuffix 方法用来判断开头和末尾字符，但没有内部包含另一个字符串的方法，这时可以先将 String 转换成 NSString
+ */
+import Foundation
+extension String {
+    //字符串扩展方法：判断字符串是否包含子字符串
+    func contains(_ substring: String) -> Bool {
+        return (self as NSString).contains(substring)
+    }
+}
 
+import Foundation
+let sql = """
+SELECT * FROM user WHERE name = %@;
+"""
+let name2 = "'huangjian'"
+print(String(format:sql, arguments:[name2]))
 
 //判断一个数是否为质数
 var judgeNum: Int = 89
@@ -172,3 +192,42 @@ if (!flag){
     print("\(judgeNum) 不是一个质数")
 }
 
+/**
+    数组的基本用法
+ */
+//创建数组
+var array: Array<String> = ["apple", "pear", "orange"]
+//var array: [String] = ["apple", "pear", "orange"]
+//var array = [String]()
+
+//追加元素
+array.append("banana")
+//追加（合并）元素
+array += ["watermelon", "peach"]
+//插入元素
+array.insert("jujube", at: 1)
+//修改元素
+array[1] = "pineapple"
+//删除元素
+array.remove(at: 0)
+//判断是否包含子元素
+array.contains("apple")
+//按字符合并数组
+print(array.joined(separator: "-"))
+//判断是否为空数组
+print(array.isEmpty)
+//获取元素个数
+print(array.count)
+//遍历数组
+for index in 0..<array.count {
+    print(array[index])
+}
+for index in array.startIndex..<array.endIndex {
+    print(array[index])
+}
+for element in array {
+    print(element)
+}
+for (index, element) in array.enumerated() {
+    print(index,element)
+}
