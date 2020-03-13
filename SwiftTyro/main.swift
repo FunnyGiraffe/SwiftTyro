@@ -231,3 +231,36 @@ for element in array {
 for (index, element) in array.enumerated() {
     print(index,element)
 }
+
+//删除元素
+var fruits:Array<String> = ["Orange", "Pear", "Peach"]
+print(fruits.first!, fruits.last!)
+//删除最后几个元素，默认1个
+var fruit = fruits.dropLast(2)
+print(fruits.first!)
+//删除数组本身的最后一个元素，并返回被删除的元素
+var popElement = fruits.popLast()
+print("小明吃掉的水果是：\(popElement!)")
+print("小明吃完水果后，还剩下：")
+for element in fruits {
+    print(element)
+}
+//删除数组本身的最后一个元素，并返回被删除的元素
+var removeElement = fruits.removeLast()
+print("小红吃掉的水果是：\(removeElement)")
+print("小红吃完水后，还剩下：")
+for (index, element) in fruits.enumerated(){
+    print(index, element)
+}
+//删除指定区间的元素
+fruit.removeSubrange(Range.init(NSMakeRange(0, 2))!)
+
+/**
+    字典的基本用法
+ */
+var dict: Dictionary <String, String> = [:]
+var dict1: [String:String] = [:]
+dict["name"] = "dingxiaoyi"
+dict["sex"] = "male"
+dict["address"] = "beijing"
+dict["code"] = "10001"
